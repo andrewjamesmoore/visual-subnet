@@ -2,13 +2,13 @@
 
 A visual, interactive subnet calculator for IPv4 and IPv6.
 
-**[visual-subnet.andr3w.sh](https://andrewjamesmoore.github.io/visual-subnet/)**
+**[github.com/andrewjamesmoore/visual-subnet](https://andrewjamesmoore.github.io/visual-subnet/)**
 
 ---
 
-![Visual Subnet screenshot](images/screenshot.png)
+When I was studying for security+ and trying to wrap my head around subnetting I kept drawing out these graphs that split the bits between the network and hosts. Having a visual and interactive slider to see how adding and removing bits affects the IPs really helped it land for me. This calculator not only let's you enter in an IP but shows you what's happening — how bits are divided, where your address sits in the block, and what all the related values mean at a glance.
 
-Most subnet calculators give you a table of numbers. Visual Subnet shows you what's actually happening — how bits are divided between the network and host portions, where your address sits in the block, and what all the related values mean at a glance.
+![Visual Subnet screenshot](images/screenshot.png)
 
 ## Features
 
@@ -30,5 +30,9 @@ The same visual approach applied to IPv6 — enter an address and prefix to see 
 An interactive guide to the mental math shortcut used for quickly calculating subnet boundaries without converting to binary — popularised by Professor Messer for networking exams and certifications. Enter an IP and prefix to see a step-by-step walkthrough alongside the full reference chart.
 
 ---
+
+### Stack
+
+Vanilla TS with Material UI web components and Jest for unit tests.
 
 [github.com/andrewjamesmoore/visual-subnet](https://github.com/andrewjamesmoore/visual-subnet)
