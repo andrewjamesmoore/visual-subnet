@@ -1,0 +1,21 @@
+import { SubnetApp } from "./components/subnet-app";
+import { IpInput } from "./components/ip-input";
+import { BitBar } from "./components/bit-bar";
+import { StatsPanel } from "./components/stats-panel";
+import { BinaryPanel } from "./components/binary-panel";
+import { SevenSecondPanel } from "./components/seven-second-panel";
+import { IPv6Input } from "./components/ipv6-input";
+import { IPv6BitBar } from "./components/ipv6-bit-bar";
+import { IPv6StatsPanel } from "./components/ipv6-stats-panel";
+import { IPv6BinaryPanel } from "./components/ipv6-binary-panel";
+
+customElements.define("subnet-app", SubnetApp);
+customElements.define("ip-input", IpInput);
+customElements.define("bit-bar", BitBar);
+customElements.define("stats-panel", StatsPanel);
+customElements.define("seven-second-panel", SevenSecondPanel);
+customElements.define("binary-panel", BinaryPanel);
+customElements.define("ipv6-input", IPv6Input);
+customElements.define("ipv6-bit-bar", IPv6BitBar);
+customElements.define("ipv6-stats-panel", IPv6StatsPanel);
+customElements.define("ipv6-binary-panel", IPv6BinaryPanel);

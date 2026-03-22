@@ -1,0 +1,295 @@
+.host {
+    display: block;
+}
+
+/* Write-up */
+.writeup {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--md-sys-color-on-surface, #1c1b1f);
+    margin-bottom: 24px;
+}
+
+.writeup h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary, #4f46e5);
+    margin-bottom: 8px;
+}
+
+.writeup p {
+    margin-bottom: 12px;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+}
+
+.writeup ol {
+    margin: 0 0 12px 20px;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+}
+
+.writeup li {
+    margin-bottom: 4px;
+}
+
+.writeup strong {
+    color: var(--md-sys-color-on-surface, #1c1b1f);
+}
+
+/* Two-table layout */
+.tablesSection {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 600px) {
+    .tablesSection {
+        flex-direction: row;
+        gap: 16px;
+    }
+}
+
+.tableWrap {
+    flex: 1;
+    min-width: 0;
+}
+
+.tableLabel {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+    margin-bottom: 8px;
+}
+
+.chartWrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.chart {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.chart th {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+    background: var(--md-sys-color-surface-container, #f3f2f7);
+    padding: 8px 12px;
+    text-align: center;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
+    white-space: nowrap;
+}
+
+.chart th:first-child,
+.chart td:first-child {
+    text-align: left;
+}
+
+.chart td {
+    padding: 8px 12px;
+    text-align: center;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
+    font-family: var(--app-font-mono, monospace);
+    cursor: pointer;
+    transition: background-color 0.12s;
+    white-space: nowrap;
+}
+
+.chart tr:hover td {
+    background: var(--md-sys-color-surface-container-low, #f7f6fb);
+}
+
+.chartRowActive td {
+    background: var(--md-sys-color-primary-container, #e0e7ff) !important;
+    color: var(--md-sys-color-on-primary-container, #1e1b4b);
+    font-weight: 600;
+}
+
+.octetGroup td {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--md-sys-color-primary, #4f46e5);
+    background: var(--md-sys-color-surface-container, #f3f2f7);
+    cursor: default;
+    padding: 12px 12px 6px;
+    border-bottom: none;
+}
+
+.octetGroup:hover td {
+    background: var(--md-sys-color-surface-container, #f3f2f7) !important;
+}
+
+.subnetsCol {
+    white-space: nowrap;
+}
+
+/* Walkthrough steps */
+.walkthrough {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.walkthroughLabel {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+    margin-bottom: 16px;
+}
+
+.step {
+    background: var(--md-sys-color-surface-container-low, #f7f6fb);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.stepNumber {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+    margin-bottom: 16px;
+}
+
+.stepTitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface, #1c1b1f);
+    margin-bottom: 8px;
+}
+
+.stepBody {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+    line-height: 1.5;
+}
+
+.stepBody strong {
+    color: var(--md-sys-color-on-surface, #1c1b1f);
+}
+
+.stepHighlight {
+    font-family: var(--app-font-mono, monospace);
+    font-weight: 700;
+    color: var(--md-sys-color-on-surface, #1c1b1f);
+}
+
+.stepCalc {
+    font-family: var(--app-font-mono, monospace);
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface, #1c1b1f);
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: var(--md-sys-color-surface, #fff);
+    border-radius: 8px;
+    border: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
+}
+
+/* Step 3 boundary table */
+.boundaryTable {
+    width: 100%;
+    max-width: 280px;
+    border-collapse: collapse;
+    font-family: var(--app-font-mono, monospace);
+    font-size: 0.85rem;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.boundaryTable th {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+    padding: 4px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
+}
+
+.boundaryTable td {
+    padding: 4px 8px;
+    text-align: center;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
+}
+
+.boundaryRowActive td {
+    background: var(--md-sys-color-primary-container, #e0e7ff);
+    color: var(--md-sys-color-on-primary-container, #1e1b4b);
+    font-weight: 600;
+}
+
+.boundaryArrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--md-sys-color-primary, #4f46e5);
+    white-space: nowrap;
+}
+
+/* Goal banner */
+.stepGoal {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+    padding: 12px 16px;
+    background: var(--md-sys-color-surface-container, #f3f2f7);
+    border-radius: 12px;
+}
+
+.stepGoal strong {
+    color: var(--md-sys-color-on-surface, #1c1b1f);
+}
+
+/* Result card */
+.stepResult {
+    background: var(--md-sys-color-primary-container, #e0e7ff);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.stepResultTitle {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--md-sys-color-on-primary-container, #1e1b4b);
+    margin-bottom: 10px;
+}
+
+.resultTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.resultTable td {
+    padding: 4px 0;
+    color: var(--md-sys-color-on-primary-container, #1e1b4b);
+}
+
+.resultTable td:first-child {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-primary-container, #1e1b4b);
+    opacity: 0.8;
+    padding-right: 16px;
+}
+
+.resultTable td:last-child {
+    font-family: var(--app-font-mono, monospace);
+    font-weight: 600;
+    text-align: right;
+}

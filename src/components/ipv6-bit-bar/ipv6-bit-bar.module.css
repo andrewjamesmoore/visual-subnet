@@ -1,0 +1,90 @@
+.host {
+  display: block;
+}
+
+.barLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.barLabelPrefix {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--app-color-network, #4f46e5);
+}
+
+.barLabelHost {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--app-color-host-text, #6b7280);
+}
+
+.barContainer {
+  position: relative;
+  display: flex;
+  height: 36px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.prefixSection {
+  background: var(--app-color-network, #4f46e5);
+  transition: width 0.15s ease;
+}
+
+.hostSection {
+  background: var(--app-color-host, #e5e7eb);
+  transition: width 0.15s ease;
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 12px;
+  margin-left: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: col-resize;
+  z-index: 2;
+  touch-action: none;
+}
+
+.divider::before {
+  content: "";
+  width: 4px;
+  height: 24px;
+  background: var(--md-sys-color-on-primary, #fff);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease;
+}
+
+.dividerDragging::before {
+  transform: scaleY(1.2);
+  background: var(--md-sys-color-primary-container, #e0e7ff);
+}
+
+.groupMarkers {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-top: 4px;
+}
+
+.groupMarker {
+  text-align: center;
+  font-size: 0.6rem;
+  color: var(--md-sys-color-on-surface-variant, #49454f);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.prefixDisplay {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--md-sys-color-on-surface-variant, #49454f);
+  margin-top: 8px;
+}

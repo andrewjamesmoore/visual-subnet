@@ -1,0 +1,205 @@
+.host {
+  display: block;
+}
+
+/* Chevron toggle */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggleLabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--md-sys-color-on-surface-variant, #49454f);
+}
+
+.chevron {
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--md-sys-color-on-surface-variant, #49454f);
+  transition: transform 0.2s ease;
+  transform: rotate(0deg);
+}
+
+.chevronOpen {
+  transform: rotate(90deg);
+}
+
+/* Collapsible panel */
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.panelOpen {
+  grid-template-rows: 1fr;
+}
+
+.panelInner {
+  overflow: hidden;
+  padding-top: 0;
+  transition: padding-top 0.3s ease;
+}
+
+.panelOpen .panelInner {
+  padding-top: 12px;
+}
+
+.binaryTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.binaryTable thead {
+  display: none;
+}
+
+/* Mobile: stack each row vertically */
+@media (max-width: 599px) {
+  .binaryTable,
+  .binaryTable tbody,
+  .binaryTable tr,
+  .binaryTable td {
+    display: block;
+    width: 100%;
+  }
+
+  .binaryTable tr {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
+  }
+
+  .binaryTable td {
+    padding: 2px 0;
+    border-bottom: none;
+  }
+
+  .binaryTable tr.sectionHeading {
+    padding: 0;
+  }
+}
+
+/* Desktop: regular table */
+@media (min-width: 600px) {
+  .binaryTable thead {
+    display: table-header-group;
+  }
+
+  .binaryTable th,
+  .binaryTable td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant, #cac4d0);
+  }
+}
+
+.th {
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--md-sys-color-on-surface-variant, #49454f);
+  background: var(--md-sys-color-surface-container, #f3f2f7);
+}
+
+.rowLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface-variant, #49454f);
+  white-space: nowrap;
+}
+
+@media (min-width: 600px) {
+  .rowLabel {
+    width: 150px;
+  }
+}
+
+.binaryBits {
+  font-family: var(--app-font-mono, monospace);
+  font-size: 0.82rem;
+  letter-spacing: 0.3px;
+}
+
+.bitNetwork {
+  color: var(--app-color-network, #4f46e5);
+  font-weight: 700;
+}
+
+.bitHost {
+  color: var(--app-color-host-text, #6b7280);
+}
+
+.dotSep {
+  color: var(--md-sys-color-on-surface-variant, #49454f);
+  margin: 0 1px;
+}
+
+.decimalCol {
+  font-family: var(--app-font-mono, monospace);
+  font-size: 0.85rem;
+  color: var(--md-sys-color-on-surface, #1c1b1f);
+  white-space: nowrap;
+}
+
+@media (max-width: 599px) {
+  .decimalCol {
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant, #49454f);
+  }
+}
+
+.andRow td {
+  border-bottom: 3px double var(--md-sys-color-primary, #4f46e5);
+}
+
+@media (max-width: 599px) {
+  .andRow {
+    border-bottom: 3px double var(--md-sys-color-primary, #4f46e5) !important;
+  }
+
+  .andRow td {
+    border-bottom: none;
+  }
+}
+
+.andLabel {
+  color: var(--md-sys-color-primary, #4f46e5) !important;
+  font-weight: 700 !important;
+}
+
+.resultRow td {
+  background: var(--md-sys-color-primary-container, #e0e7ff);
+}
+
+@media (max-width: 599px) {
+  .resultRow {
+    background: var(--md-sys-color-primary-container, #e0e7ff);
+    border-radius: 8px;
+    padding: 10px 8px !important;
+  }
+}
+
+.sectionHeading td {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--md-sys-color-primary, #4f46e5);
+  padding: 16px 12px 8px;
+  background: var(--md-sys-color-surface-container, #f3f2f7);
+}
+
+@media (max-width: 599px) {
+  .sectionHeading td {
+    padding: 12px 0 4px;
+    background: none;
+  }
+}

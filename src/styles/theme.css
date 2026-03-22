@@ -1,0 +1,73 @@
+:root {
+    /* MD3 Indigo theme tokens */
+    --md-sys-color-primary: #4f46e5;
+    --md-sys-color-on-primary: #ffffff;
+    --md-sys-color-primary-container: #e0e7ff;
+    --md-sys-color-on-primary-container: #1e1b4b;
+    --md-sys-color-secondary: #625b71;
+    --md-sys-color-on-secondary: #ffffff;
+    --md-sys-color-secondary-container: #e8def8;
+    --md-sys-color-surface: #ffffff;
+    --md-sys-color-surface-container: #f3f2f7;
+    --md-sys-color-surface-container-low: #f7f6fb;
+    --md-sys-color-surface-container-highest: #e6e5ea;
+    --md-sys-color-on-surface: #1c1b1f;
+    --md-sys-color-on-surface-variant: #49454f;
+    --md-sys-color-outline: #79747e;
+    --md-sys-color-outline-variant: #cac4d0;
+    --md-sys-color-error: #b3261e;
+    --md-sys-color-on-error: #ffffff;
+
+    /* MD3 typography */
+    --md-ref-typeface-plain: "Roboto", system-ui, sans-serif;
+    --md-ref-typeface-brand: "Roboto", system-ui, sans-serif;
+
+    /* Slider theming */
+    --md-slider-active-track-color: #4f46e5;
+    --md-slider-handle-color: #4f46e5;
+    --md-slider-focus-handle-color: #4338ca;
+    --md-slider-hover-handle-color: #4338ca;
+    --md-slider-pressed-handle-color: #3730a3;
+    --md-slider-inactive-track-color: #e0e7ff;
+
+    /* Text field theming */
+    --md-outlined-text-field-focus-outline-color: #4f46e5;
+    --md-outlined-text-field-focus-label-text-color: #4f46e5;
+    --md-outlined-text-field-caret-color: #4f46e5;
+
+    /* Custom app tokens */
+    --app-font-mono: "Roboto Mono", "Consolas", monospace;
+    --app-color-network: #4f46e5;
+    --app-color-network-light: #e0e7ff;
+    --app-color-host: #e5e7eb;
+    --app-color-host-text: #6b7280;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: var(--md-ref-typeface-plain);
+    color: var(--md-sys-color-on-surface);
+    background: var(--md-sys-color-surface-container-low);
+    -webkit-font-smoothing: antialiased;
+    scrollbar-gutter: stable;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+@media (min-width: 600px) {
+    body {
+        padding: 2rem 1rem;
+    }
+}

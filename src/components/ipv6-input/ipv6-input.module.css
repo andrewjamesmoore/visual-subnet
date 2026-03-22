@@ -1,0 +1,8 @@
+.host {
+  display: block;
+}
+
+.host md-outlined-text-field {
+  width: 100%;
+  font-family: var(--app-font-mono, monospace);
+}
